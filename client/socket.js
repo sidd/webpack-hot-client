@@ -14,7 +14,7 @@ module.exports = function connect(options, handler) {
     port: options.webSocket.port
   });
 
-  if (options.webSocket.host.matches(/wss?:\/\//)) {
+  if (/wss?:\/\//.test(options.webSocket.host)) {
     socketUrl = options.webSocket.host;
   }
 
